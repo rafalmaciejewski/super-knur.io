@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Knur.io 🐗</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== LOBBY SCREEN ===== -->
+  <div id="lobby-screen" class="screen active">
+    <div class="lobby-container">
+      <h1>🐗 Super Knur.io</h1>
+
+      <div class="character-preview">
+        <canvas id="preview-canvas" width="130" height="130"></canvas>
+      </div>
+
+      <div class="customization">
+
+        <div class="form-group">
+          <label for="player-name">Your Name</label>
+          <input
+            type="text"
+            id="player-name"
+            placeholder="Enter your name…"
+            maxlength="20"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Body Colour</label>
+          <div class="option-row" id="color-options"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Hat</label>
+          <div class="option-row" id="hat-options"></div>
+        </div>
+
+      </div>
+
+      <p class="hint">Arrow keys / WASD to move &bull; Space / ↑ to jump (×2)</p>
+
+      <div class="lobby-buttons">
+        <button id="start-game-btn" class="btn btn-primary">🎮 Start Game</button>
+        <button id="leaderboard-btn" class="btn btn-secondary">🏆 Leaderboard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GAME SCREEN ===== -->
+  <div id="game-screen" class="screen">
+    <div class="game-wrapper">
+      <canvas id="game-canvas" width="800" height="500"></canvas>
+      <div id="game-overlay" class="hidden">
+        <div class="overlay-panel">
+          <h2 id="result-title"></h2>
+          <p id="result-score"></p>
+          <div class="overlay-buttons">
+            <button id="play-again-btn" class="btn btn-primary">▶ Play Again</button>
+            <button id="back-lobby-btn" class="btn btn-secondary">← Lobby</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LEADERBOARD SCREEN ===== -->
+  <div id="leaderboard-screen" class="screen">
+    <div class="leaderboard-container">
+      <h2>🏆 Leaderboard</h2>
+      <table id="lb-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="lb-body"></tbody>
+      </table>
+      <button id="back-from-lb-btn" class="btn btn-secondary">← Back</button>
+    </div>
+  </div>
+
+  <script src="/js/game.js"></script>
+</body>
+</html>

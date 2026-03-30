@@ -1,0 +1,13 @@
+{
+  "name": "super-knur.io",
+  "version": "1.0.0",
+  "description": "Super Mario clone with Knur (wild boar) as the main character",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
